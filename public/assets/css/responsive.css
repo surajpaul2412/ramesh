@@ -1592,3 +1592,23 @@
     font-size: 12px;
   }
 }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/*Mobile only*/
+@media only screen and (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+  .font-10 {
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+  }
+}
+/*Desktop only*/
+@media only screen and (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
+}

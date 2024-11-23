@@ -9,6 +9,17 @@ use App\Http\Controllers\ProfileController;
 // Public Route
 Route::get('/', function () {
     return view('welcome');
+})->name('welcome');
+
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+// Fallback route
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
 });
 
 // Admin Routes

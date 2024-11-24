@@ -239,32 +239,40 @@
             <div class="site-navigation">
                 <nav id="main-navigation">
                     <ul id="menu-main-menu" class="menu">
-                        <li class="level-0 menu-item menu-item-has-children current-menu-item">
-                            <a href="index.html"><span class="menu-item-text">Home</span></a>
+                        <li class="level-0 menu-item menu-item-has-children">
+                            <a href="shop-grid-left.html"><span class="menu-item-text">Our Collections</span></a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="index.html"><span class="menu-item-text">Home Clean</span></a>
+                                <li class="level-1 menu-item menu-item-has-children">
+                                    <a href="shop-grid-left.html"><span class="menu-item-text">Shop - Products</span></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="shop-grid-left.html"><span class="menu-item-text">Shop Grid - Left Sidebar</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop-list-left.html"><span class="menu-item-text">Shop List - Left Sidebar</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop-grid-right.html"><span class="menu-item-text">Shop Grid - Right Sidebar</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop-list-right.html"><span class="menu-item-text">Shop List - Right Sidebar</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop-grid-fullwidth.html"><span class="menu-item-text">Shop Grid - No Sidebar</span></a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="index2.html"><span class="menu-item-text">Home Collection</span></a>
+                                    <a href="shop-details.html"><span class="menu-item-text">Shop Details</span></a>
                                 </li>
                                 <li>
-                                    <a href="index3.html"><span class="menu-item-text">Home Minimal</span></a>
+                                    <a href="shop-cart.html"><span class="menu-item-text">Shop - Cart</span></a>
                                 </li>
                                 <li>
-                                    <a href="index4.html"><span class="menu-item-text">Home Modern</span></a>
+                                    <a href="shop-checkout.html"><span class="menu-item-text">Shop - Checkout</span></a>
                                 </li>
                                 <li>
-                                    <a href="index5.html"><span class="menu-item-text">Home Parallax</span></a>
-                                </li>
-                                <li>
-                                    <a href="index6.html"><span class="menu-item-text">Home Strong</span></a>
-                                </li>
-                                <li>
-                                    <a href="index7.html"><span class="menu-item-text">Home Style</span></a>
-                                </li>
-                                <li>
-                                    <a href="index8.html"><span class="menu-item-text">Home Unique</span></a>
+                                    <a href="shop-wishlist.html"><span class="menu-item-text">Shop - Wishlist</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -305,48 +313,43 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- <li class="level-0 menu-item menu-item-has-children">
+                            <a href="#"><span class="menu-item-text">Pages</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="page-login.html"><span class="menu-item-text">Login / Register</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-forgot-password.html"><span class="menu-item-text">Forgot Password</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-my-account.html"><span class="menu-item-text">My Account</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-about.html"><span class="menu-item-text">About Us</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-contact.html"><span class="menu-item-text">Contact</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-faq.html"><span class="menu-item-text">FAQ</span></a>
+                                </li>
+                                <li>
+                                    <a href="page-404.html"><span class="menu-item-text">Page 404</span></a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <li class="level-0 menu-item">
+                            <a href=""><span class="menu-item-text">About Us</span></a>
+                        </li>
+                        <li class="level-0 menu-item">
+                            <a href=""><span class="menu-item-text">Our Products</span></a>
+                        </li>
                         <li class="level-0 menu-item menu-item-has-children mega-menu mega-menu-fullwidth align-center">
                             <a href="blog-grid-left.html"><span class="menu-item-text">Blog</span></a>
                             <div class="sub-menu">
                                 <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="menu-section">
-                                            <h2 class="sub-menu-title">Blog Category</h2>
-                                            <ul class="menu-list">
-                                                <li>
-                                                    <a href="blog-grid-left.html"><span class="menu-item-text">Blog Grid - Left Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-grid-right.html"><span class="menu-item-text">Blog Grid - Right Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list-left.html"><span class="menu-item-text">Blog List - Left Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list-right.html"><span class="menu-item-text">Blog List - Right Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-grid-fullwidth.html"><span class="menu-item-text">Blog Grid - No Sidebar</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="menu-section">
-                                            <h2 class="sub-menu-title">Blog Details</h2>
-                                            <ul class="menu-list">
-                                                <li>
-                                                    <a href="blog-details-left.html"><span class="menu-item-text">Blog Details - Left Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details-right.html"><span class="menu-item-text">Blog Details - Right Sidebar</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details-fullwidth.html"><span class="menu-item-text">Blog Details - No Sidebar</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
+                                    <div class="col-md-12">
                                         <div class="menu-section">
                                             <h2 class="sub-menu-title">Recent Posts</h2>
                                             <div class="block block-posts recent-posts p-t-5">
@@ -406,34 +409,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="level-0 menu-item menu-item-has-children">
-                            <a href="#"><span class="menu-item-text">Pages</span></a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="page-login.html"><span class="menu-item-text">Login / Register</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-forgot-password.html"><span class="menu-item-text">Forgot Password</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-my-account.html"><span class="menu-item-text">My Account</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-about.html"><span class="menu-item-text">About Us</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html"><span class="menu-item-text">Contact</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-faq.html"><span class="menu-item-text">FAQ</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-404.html"><span class="menu-item-text">Page 404</span></a>
-                                </li>
-                            </ul>
-                        </li>
                         <li class="level-0 menu-item">
-                            <a href="page-contact.html"><span class="menu-item-text">Contact</span></a>
+                            <a href="page-contact.html"><span class="menu-item-text">Contact Us</span></a>
                         </li>
                     </ul>
                 </nav>

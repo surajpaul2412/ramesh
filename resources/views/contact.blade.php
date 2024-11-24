@@ -7,7 +7,7 @@
 			<!-- Block Contact Map -->
 			<div class="block block-contact-map">
 				<div class="block-widget-wrap">
-					<iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="London Eye, London, United Kingdom"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23919.547108341856!2d77.1586386556899!3d28.6499077477717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03e1eae548a5%3A0xf8a037b0183c9177!2sSwarnSilva!5e0!3m2!1sen!2sin!4v1732457261809!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 		</div>
@@ -78,17 +78,23 @@
 						<form action="#" method="post" class="contact-form" novalidate="novalidate">
 							<div class="contact-us-form">
 								<div class="row">
-									<div class="col-sm-12 col-md-6">
+									<div class="col-sm-12 col-md-4">
 								        <label class="required">Name</label><br>
 								        <span class="form-control-wrap">
 								        	<input type="text" name="name" value="" size="40" class="form-control" aria-required="true">
 								        </span>
 								    </div>
-									<div class="col-sm-12 col-md-6">
+									<div class="col-sm-12 col-md-4">
 								        <label class="required">Email</label><br>
 								        <span class="form-control-wrap">
 							        		<input type="email" name="email" value="" size="40" class="form-control" aria-required="true">
 							        	</span>
+								    </div>
+								    <div class="col-sm-12 col-md-4">
+								        <label class="required">Mobile</label><br>
+								        <span class="form-control-wrap">
+								        	<input type="text" name="number" value="" size="40" class="form-control" aria-required="true">
+								        </span>
 								    </div>
 								</div>
 								<div class="row">

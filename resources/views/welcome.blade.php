@@ -10,90 +10,22 @@
                     <div class="block-content">
                         <div class="product-cats-list slick-wrap">
                             <div class="slick-sliders content-category" data-dots="0" data-slidestoscroll="1" data-nav="0" data-columns4="4" data-columns3="3" data-columns2="3" data-columns1="1" data-columns1440="5" data-columns="5">
+                                @foreach(categories() as $category)
                                 <div class="item item-product-cat slick-slide"> 
                                     <div class="item-product-cat-content">
                                         <a href="shop-grid-left.html">
                                             <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-1.jpg" alt="Bracelets">
+                                                <img width="258" height="258" src="{{$category->image}}" alt="{{$category->slug}}">
                                             </div>
                                         </a>            
                                         <div class="product-cat-content-info">
                                             <h3 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Bracelets</a>
+                                                <a href="shop-grid-left.html">{{$category->name}}</a>
                                             </h3>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-2.jpg" alt="Charms">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Charms</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-3.jpg" alt="Earrings">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Earrings</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-4.jpg" alt="Necklaces">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Necklaces</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-5.jpg" alt="Rings">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Rings</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="258" height="258" src="media/product/cat-1.jpg" alt="Bracelets">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title font-10">
-                                                <a href="shop-grid-left.html">Bracelets</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -158,120 +90,22 @@
             <div class="block block-product-cats layout-2">
                 <div class="block-widget-wrap">
                     <div class="row">
+                        @foreach(categories() as $category)
                         <div class="col-lg-3 col-md-6 col-6 m-b-30">
                             <div class="item item-product-cat">
                                 <div class="item-product-cat-content">
                                     <div class="item-image animation-horizontal">
                                         <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-1.jpg" alt="Bracelets">
+                                            <img width="330" height="330" src="{{$category->image}}" alt="{{$category->slug}}">
                                         </a>
                                     </div>
                                     <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Bracelets</a>
+                                        <a class="item-title" href="">{{$category->name}}</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-6 m-b-30">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-2.jpg" alt="Earrings">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Earrings</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-6 m-b-30">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-3.jpg" alt="Necklaces">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Necklaces</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-6 m-b-30">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-4.jpg" alt="Rings">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Rings</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-6 col-6">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-1.jpg" alt="Bracelets">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Bracelets</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-6">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-2.jpg" alt="Earrings">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Earrings</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-6">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-3.jpg" alt="Necklaces">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Necklaces</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-6">
-                            <div class="item item-product-cat">
-                                <div class="item-product-cat-content">
-                                    <div class="item-image animation-horizontal">
-                                        <a href="shop-grid-left.html">
-                                            <img width="330" height="330" src="media/product/cat-3-4.jpg" alt="Rings">
-                                        </a>
-                                    </div>
-                                    <div class="product-cat-content-info">
-                                        <a class="item-title" href="shop-grid-left.html">Rings</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -370,7 +204,7 @@
         </div>
     </section>
 
-    <section class="section section-padding background-img bg-img-2 p-t-70 p-b-50">
+    <section class="section section-padding background-img bg-img-2 p-t-70 p-b-50 mb-0">
         <div class="section-container">
             <!-- Block Product Categories (Layout 3) -->
             <div class="block block-product-cats slider layout-3">
@@ -382,48 +216,24 @@
                     <div class="block-content">
                         <div class="product-cats-list slick-wrap">
                             <div class="slick-sliders content-category" data-dots="0" data-slidestoscroll="true" data-nav="0" data-columns4="3" data-columns3="3" data-columns2="4" data-columns1="4" data-columns1440="5" data-columns="5">
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="273" height="376" src="media/product/cat-4-3.jpg" alt="Earrings">
+                                @if(types())
+                                    @foreach(types() as $type)
+                                    <div class="item item-product-cat slick-slide"> 
+                                        <div class="item-product-cat-content">
+                                            <a href="{{$type->slug}}">
+                                                <div class="item-image animation-horizontal">
+                                                    <img width="273" height="376" src="{{$type->image}}" alt="{{$type->slug}}">
+                                                </div>
+                                            </a>            
+                                            <div class="product-cat-content-info">
+                                                <h2 class="item-title">
+                                                    <a href="{{$type->slug}}">{{$type->name}}</a>
+                                                </h2>
                                             </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title">
-                                                <a href="shop-grid-left.html">Male</a>
-                                            </h2>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="273" height="376" src="media/product/cat-4-4.jpg" alt="Necklaces">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title">
-                                                <a href="shop-grid-left.html">Female</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item item-product-cat slick-slide"> 
-                                    <div class="item-product-cat-content">
-                                        <a href="shop-grid-left.html">
-                                            <div class="item-image animation-horizontal">
-                                                <img width="273" height="376" src="media/product/cat-4-5.jpg" alt="Rings">
-                                            </div>
-                                        </a>            
-                                        <div class="product-cat-content-info">
-                                            <h2 class="item-title">
-                                                <a href="shop-grid-left.html">Kids</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -460,9 +270,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -501,9 +308,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -545,9 +349,6 @@
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
                                                     </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
-                                                    </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
                                                     </span>     
@@ -584,9 +385,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -627,9 +425,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -674,9 +469,6 @@
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
                                                     </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
-                                                    </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
                                                     </span>     
@@ -714,9 +506,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -758,9 +547,6 @@
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
                                                     </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
-                                                    </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
                                                     </span>     
@@ -797,9 +583,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -840,9 +623,6 @@
                                                     </div>
                                                     <div class="btn-wishlist" data-title="Wishlist">
                                                         <button class="product-btn">Add to wishlist</button>
-                                                    </div>
-                                                    <div class="btn-compare" data-title="Compare">
-                                                        <button class="product-btn">Compare</button>
                                                     </div>
                                                     <span class="product-quickview" data-title="Quick View">
                                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>

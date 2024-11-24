@@ -61,15 +61,16 @@
                             <i class="icon-search"></i>
                         </button>
                         <input type="text" autocomplete="off" value="" name="s" class="input-search s" placeholder="Search...">
+                        @if(categories())
                         <div class="content-menu_search">
                             <label>Suggested</label>
                             <ul id="menu_search" class="menu">
-                                <li><a href="#">Earrings</a></li>
-                                <li><a href="#">Necklaces</a></li>
-                                <li><a href="#">Bracelets</a></li>
-                                <li><a href="#">Jewelry Box</a></li>
+                                @foreach(categories() as $category)
+                                <li><a href="#">{{$category->name}}</a></li>
+                                @endforeach
                             </ul>           
                         </div>
+                        @endif
                     </div>
                 </form> 
             </div>  

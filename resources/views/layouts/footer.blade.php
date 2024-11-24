@@ -65,19 +65,16 @@
                                             <a href="#">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="#">FAQ</a>
-                                        </li>
-                                        <li>
                                             <a href="#">Our Producers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Sitemap</a>
                                         </li>
                                         <li>
                                             <a href="#">Terms & Conditions</a>
                                         </li>
                                         <li>
                                             <a href="#">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return Policy</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -88,24 +85,11 @@
                                 <h2 class="block-title">Catalog</h2>
                                 <div class="block-content">
                                     <ul>
+                                        @foreach(categories() as $category)
                                         <li>
-                                            <a href="shop-grid-left.html">Earrings</a>
+                                            <a href="">{{$category->name}}</a>
                                         </li>
-                                        <li>
-                                            <a href="shop-grid-left.html">Necklaces</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-left.html">Bracelets</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-left.html">Rings</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-left.html">Jewelry Box</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-left.html">Studs</a>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -122,13 +106,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="footer-left">
-                                <p class="copyright">SwarnSilva | Copyright © 2024. All Right Reserved</p>
+                                <p class="copyright">Swarnsilva | Copyright © 2024. All Right Reserved</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="footer-right">
                                 <div class="block block-image">
-                                    <img width="309" height="32" src="media/payments.png" alt="">
+                                    <img width="309" height="32" src="media/payments.png" alt="payments">
                                 </div>
                             </div>
                         </div>

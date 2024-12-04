@@ -11,19 +11,20 @@
         <link rel="shortcut icon" type="image/x-icon" href="media/favicon.png">
         
         <!-- Dependency Styles -->
-        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="libs/feather-font/css/iconfont.css" type="text/css">
-        <link rel="stylesheet" href="libs/icomoon-font/css/icomoon.css" type="text/css">
-        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="libs/wpbingofont/css/wpbingofont.css" type="text/css">
-        <link rel="stylesheet" href="libs/elegant-icons/css/elegant.css" type="text/css">
-        <link rel="stylesheet" href="libs/slick/css/slick.css" type="text/css">
-        <link rel="stylesheet" href="libs/slick/css/slick-theme.css" type="text/css">
-        <link rel="stylesheet" href="libs/mmenu/css/mmenu.min.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/feather-font/css/iconfont.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/icomoon-font/css/icomoon.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/font-awesome/css/font-awesome.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/wpbingofont/css/wpbingofont.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/elegant-icons/css/elegant.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/slick/css/slick.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/slick/css/slick-theme.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/mmenu/css/mmenu.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('libs/slider/css/jslider.css') }}" type="text/css">
 
         <!-- Site Stylesheet -->
-        <link rel="stylesheet" href="assets/css/app.css" type="text/css">
-        <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" type="text/css">
         
         <!-- Google Web Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
@@ -34,13 +35,8 @@
         <div id="page" class="hfeed page-wrapper">
             
             @include('layouts.header')
-            <div id="site-main" class="site-main">
-                <div id="main-content" class="main-content">
-                    <div id="primary" class="content-area">
-                        @yield('main')
-                    </div><!-- #primary -->
-                </div><!-- #main-content -->
-            </div>
+            
+            @yield('main')
 
             @include('layouts.footer')
         </div>
@@ -354,7 +350,7 @@
             <a href="#" class="newsletter-close"></a>
             <div class="newsletter-container"> 
                 <div class="newsletter-img">
-                    <img src="media/banner/newsletter-popup.jpg" alt="">
+                    <img src="{{ asset('media/banner/newsletter-popup.jpg') }}" alt="">
                 </div> 
                 <div class="newsletter-form">
                     <form action="#" method="post">
@@ -381,13 +377,18 @@
         </div>
 
         <!-- Dependency Scripts -->
-        <script src="libs/popper/js/popper.min.js"></script>
-        <script src="libs/jquery/js/jquery.min.js"></script>
-        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-        <script src="libs/slick/js/slick.min.js"></script>
-        <script src="libs/mmenu/js/jquery.mmenu.all.min.js"></script>
-        
+        <script src="{{ asset('libs/popper/js/popper.min.js') }}"></script>
+        <script src="{{ asset('libs/jquery/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('libs/slick/js/slick.min.js') }}"></script>
+        <script src="{{ asset('libs/mmenu/js/jquery.mmenu.all.min.js') }}"></script>
+        <script src="{{ asset('libs/slider/js/tmpl.js') }}"></script>
+        <script src="{{ asset('libs/slider/js/jquery.dependClass-0.1.js') }}"></script>
+        <script src="{{ asset('libs/slider/js/draggable-0.1.js') }}"></script>
+        <script src="{{ asset('libs/slider/js/jquery.slider.js') }}"></script>
+        <script src="{{ asset('libs/elevatezoom/js/jquery.elevatezoom.js') }}"></script>
+
         <!-- Site Scripts -->
-        <script src="assets/js/app.js"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
     </body>
 </html>

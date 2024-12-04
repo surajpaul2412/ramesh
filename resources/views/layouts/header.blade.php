@@ -410,7 +410,7 @@
                             </div>
                         </li>
                         <li class="level-0 menu-item">
-                            <a href="page-contact.html"><span class="menu-item-text">Contact Us</span></a>
+                            <a href="{{route('contact')}}"><span class="menu-item-text">Contact Us</span></a>
                         </li>
                     </ul>
                 </nav>

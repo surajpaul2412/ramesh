@@ -16,7 +16,15 @@ Route::get('/about', function () {
 });
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
+Route::get('/shop', function () {
+    return view('shop');
+})->name('shop');
+
+// Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.detail');
+Route::get('/product-detail', [ProductController::class, 'show1'])->name('product.detail');
+
+
 // Fallback route
 Route::fallback(function () {
     return response()->view('errors.404', [], 404);

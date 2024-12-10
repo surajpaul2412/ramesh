@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WishlistController;
 
 // Public Route
 Route::get('/', function () {
@@ -40,6 +41,19 @@ Route::middleware(['isAdmin'])->group(function () {
 Route::middleware(['isCustomer'])->group(function () {
     // Customer Dashboard
     Route::get('/customer/dashboard', [CustomerController::class, 'index'])->name('customer.dashboard');
+});
+
+Route::middleware('auth')->group(function () {
+    // Wishlist
+    Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+    Route::post('/wishlist/add/{product}', [WishlistController::class, 'add'])->name('wishlist.add');
+    Route::delete('/wishlist/remove/{product}', [WishlistController::class, 'remove'])->name('wishlist.remove');
+
+    // Cart
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 });
 
 // Profile Routes (Common for All Authenticated Users)

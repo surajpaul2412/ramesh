@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" type="text/css">
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
         <!-- Google Web Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
@@ -345,7 +347,7 @@
         </div>
 
         <!-- Newsletter Popup -->
-        <div class="popup-shadow"></div>
+        <!-- <div class="popup-shadow"></div>
         <div class="newsletter-popup">
             <a href="#" class="newsletter-close"></a>
             <div class="newsletter-container"> 
@@ -366,7 +368,7 @@
                     </form>
                 </div> 
             </div>
-        </div>
+        </div> -->
 
         <!-- Page Loader -->
         <div class="page-preloader">
@@ -390,5 +392,43 @@
 
         <!-- Site Scripts -->
         <script src="{{ asset('assets/js/app.js') }}"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script>
+            @if(session('success'))
+                toastr.success("{{ session('success') }}");
+            @endif
+
+            @if(session('error'))
+                toastr.error("{{ session('error') }}");
+            @endif
+
+            @if(session('warning'))
+                toastr.warning("{{ session('warning') }}");
+            @endif
+
+            @if(session('info'))
+                toastr.info("{{ session('info') }}");
+            @endif
+        </script>
+        <script>
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": true,
+                "progressBar": true,
+                "positionClass": "toast-top-right", // Change position here
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+        </script>
     </body>
 </html>

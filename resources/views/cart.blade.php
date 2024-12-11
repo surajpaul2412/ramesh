@@ -23,7 +23,7 @@
 						<div class="shop-cart">	
 							<div class="row">
 								<div class="col-xl-8 col-lg-12 col-md-12 col-12">
-									<form class="cart-form" action="#" method="post">
+									<div class="cart-form">
 										<div class="table-responsive">
 											<table class="cart-items table" cellspacing="0">
 												<thead>
@@ -36,39 +36,14 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr class="cart-item">		
-														<td class="product-thumbnail">
-															<a href="shop-details.html">
-																<img width="600" height="600" src="media/product/3.jpg" class="product-image" alt="">
-															</a>				
-															<div class="product-name">
-																<a href="shop-details.html">Twin Hoops</a>								
-															</div>
-														</td>
-														<td class="product-price">
-															<span class="price">$150.00</span>
-														</td>
-														<td class="product-quantity">
-															<div class="quantity">
-																<button type="button" class="minus">-</button>	
-																<input type="number" class="qty" step="1" min="0" max="" name="quantity" value="2" title="Qty" size="4" placeholder="" inputmode="numeric" autocomplete="off">
-																<button type="button" class="plus">+</button>
-															</div>
-														</td>
-														<td class="product-subtotal">
-															<span>$300.00</span>
-														</td>
-														<td class="product-remove">
-															<a href="#" class="remove">×</a>								
-														</td>
-													</tr>
+													@foreach($cartItems as $item)
 													<tr class="cart-item">		
 														<td class="product-thumbnail">
 															<a href="shop-details.html">
 																<img width="600" height="600" src="media/product/1.jpg" class="product-image" alt="">
 															</a>				
 															<div class="product-name">
-																<a href="shop-details.html">Medium Flat Hoops</a>								
+																<a href="shop-details.html">Medium Flat Hoops</a>
 															</div>
 														</td>
 														<td class="product-price">
@@ -85,9 +60,14 @@
 															<span class="price">$180.00</span>
 														</td>
 														<td class="product-remove">
-															<a href="#" class="remove">×</a>								
+															<form action="{{ route('cart.remove', $item->id) }}" method="POST">
+															    @csrf
+															    @method('DELETE') <!-- Method spoofing for DELETE -->
+															    <button type="submit" class="btn btn-danger">Remove</button>
+															</form>
 														</td>
 													</tr>
+													@endforeach
 													<tr>
 														<td colspan="6" class="actions">
 															<div class="bottom-cart">
@@ -103,7 +83,7 @@
 												</tbody>
 											</table>
 										</div>
-									</form>
+									</div>
 								</div>
 								<div class="col-xl-4 col-lg-12 col-md-12 col-12">
 									<div class="cart-totals">

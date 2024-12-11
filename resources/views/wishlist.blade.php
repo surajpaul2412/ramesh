@@ -12,7 +12,7 @@
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>Shopping Cart
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>Wishlist
 					</div>
 				</div>
 			</div>

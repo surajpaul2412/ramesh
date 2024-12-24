@@ -8,11 +8,11 @@
 				<div class="section-container">
 					<div class="content-title-heading">
 						<h1 class="text-title-heading">
-							Bracelets
+							{{ ucfirst($category) }}
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="index.html">Home</a><span class="delimiter"></span><a href="shop-grid-left.html">Shop</a><span class="delimiter"></span>Bracelets
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span><a href="{{ route('shop', ['category' => 'all']) }}">Shop</a><span class="delimiter"></span>{{ ucfirst($category) }}
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 								<div class="products-topbar clearfix">
 									<div class="products-topbar-left">
 										<div class="products-count">
-											Showing all 21 results
+											Showing all {{ $products->count() }} results
 										</div>
 									</div>
 									<div class="products-topbar-right">
@@ -136,8 +136,8 @@
 															</div>
 															<div class="product-thumb-hover">
 																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/1.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/1-2.jpg" class="hover-image back" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/1.jpg') }}" class="post-image" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/1-2.jpg') }}" class="hover-image back" alt="">
 																</a>
 															</div>		
 															<div class="product-button">
@@ -174,8 +174,8 @@
 															</div>
 															<div class="product-thumb-hover border">
 																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/5.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/5-2.jpg" class="hover-image back" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/5.jpg') }}" class="post-image" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/5-2.jpg') }}" class="hover-image back" alt="">
 																</a>
 															</div>		
 															<div class="product-button">
@@ -212,8 +212,8 @@
 														<div class="products-thumb">
 															<div class="product-thumb-hover">
 																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/2.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/2-2.jpg" class="hover-image back" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/2.jpg') }}" class="post-image" alt="">
+																	<img width="600" height="600" src="{{ asset('media/product/2-2.jpg') }}" class="hover-image back" alt="">
 																</a>
 															</div>		
 															<div class="product-button">
@@ -242,248 +242,68 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-lable">
-																<div class="onsale">-33%</div>
-																<div class="hot">Hot</div>
-															</div>
-															<div class="product-thumb-hover border">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/6.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/6-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>		
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-4"></div><span class="count">(2 reviews)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">Bora Armchair</a></h3>
-																<span class="price">
-																	<del aria-hidden="true"><span>$150.00</span></del> 
-																	<ins><span>$100.00</span></ins>
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-lable">
-																<div class="onsale">-23%</div>
-																<div class="hot">Hot</div>
-															</div>
-															<div class="product-thumb-hover">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/3.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/3-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>		
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-5"></div><span class="count">(5 review)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">Twin Hoops</a></h3>
-																<span class="price">
-																	<del aria-hidden="true"><span>$100.00</span></del> 
-																	<ins><span>$90.00</span></ins>
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-lable">
-																<div class="onsale">-37%</div>
-																<div class="hot">Hot</div>
-															</div>
-															<div class="product-thumb-hover border">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/7.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/7-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>		
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-0"></div><span class="count">(0 review)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">Diamond Bracelet</a></h3>
-																<span class="price">
-																	<del aria-hidden="true"><span>$79.00</span></del> 
-																	<ins><span>$50.00</span></ins>
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-thumb-hover">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/4.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/4-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>		
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-0"></div><span class="count">(0 review)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">Yilver And Turquoise Earrings</a></h3>
-																<span class="price">$120.00</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-lable">
-																<div class="onsale">-10%</div>
-																<div class="hot">Hot</div>
-															</div>
-															<div class="product-thumb-hover border">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/8.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/8-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>		
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-5"></div><span class="count">(3 review)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">X Hoop Earrings</a></h3>
-																<span class="price">
-																	<del aria-hidden="true"><span>$200.00</span></del> 
-																	<ins><span>$180.00</span></ins>
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-													<div class="products-entry clearfix product-wapper">
-														<div class="products-thumb">
-															<div class="product-lable">
-																<div class="hot">Hot</div>
-															</div>
-															<div class="product-thumb-hover border">
-																<a href="shop-details.html">
-																	<img width="600" height="600" src="media/product/9.jpg" class="post-image" alt="">
-																	<img width="600" height="600" src="media/product/9-2.jpg" class="hover-image back" alt="">
-																</a>
-															</div>
-															<div class="product-button">
-																<div class="btn-add-to-cart" data-title="Add to cart">
-																	<a rel="nofollow" href="#" class="product-btn button">Add to cart</a>
-																</div>
-																<div class="btn-wishlist" data-title="Wishlist">
-																	<button class="product-btn">Add to wishlist</button>
-																</div>
-																<div class="btn-compare" data-title="Compare">
-																	<button class="product-btn">Compare</button>
-																</div>
-																<span class="product-quickview" data-title="Quick View">
-																	<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
-																</span>		
-															</div>
-														</div>
-														<div class="products-content">
-															<div class="contents text-center">
-																<div class="rating">
-																	<div class="star star-4"></div><span class="count">(1 review)</span>
-																</div>
-																<h3 class="product-title"><a href="shop-details.html">Yintage Medallion Necklace</a></h3>
-																<span class="price">$140.00</span>
-															</div>
-														</div>
-													</div>
-												</div>
 											</div>
+{{--<div class="row">
+    @foreach($products as $product)
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <div class="products-entry clearfix product-wapper">
+                <div class="products-thumb">
+                    @if($product->is_hot)
+                        <div class="product-lable">
+                            <div class="hot">Hot</div>
+                        </div>
+                    @elseif($product->discount > 0)
+                        <div class="product-lable">
+                            <div class="onsale">-{{ $product->discount }}%</div>
+                        </div>
+                    @endif
+                    <div class="product-thumb-hover">
+                        <a href="{{ route('shop.details', $product->id) }}">
+                            <img width="600" height="600" src="{{ asset('storage/'.$product->image) }}" class="post-image" alt="{{ $product->name }}">
+                            @if($product->hover_image)
+                                <img width="600" height="600" src="{{ asset('storage/'.$product->hover_image) }}" class="hover-image back" alt="{{ $product->name }}">
+                            @endif
+                        </a>
+                    </div>
+                    <div class="product-button">
+                        <div class="btn-add-to-cart" data-title="Add to cart">
+                            <a rel="nofollow" href="{{ route('cart.add', $product->id) }}" class="product-btn button">Add to cart</a>
+                        </div>
+                        <div class="btn-wishlist" data-title="Wishlist">
+                            <button class="product-btn">Add to wishlist</button>
+                        </div>
+                        <div class="btn-compare" data-title="Compare">
+                            <button class="product-btn">Compare</button>
+                        </div>
+                        <span class="product-quickview" data-title="Quick View">
+                            <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="products-content">
+                    <div class="contents text-center">
+                        <div class="rating">
+                            <div class="star star-{{ $product->rating }}"></div>
+                            <span class="count">({{ $product->reviews_count }} review{{ $product->reviews_count > 1 ? 's' : '' }})</span>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="{{ route('shop.details', $product->id) }}">{{ $product->name }}</a>
+                        </h3>
+                        <span class="price">
+                            @if($product->discount > 0)
+                                <del aria-hidden="true"><span>${{ $product->original_price }}</span></del> 
+                                <ins><span>${{ $product->discounted_price }}</span></ins>
+                            @else
+                                ${{ $product->price }}
+                            @endif
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>--}}
+
 										</div>
 									</div>
 									<div class="tab-pane fade" id="layout-list" role="tabpanel">

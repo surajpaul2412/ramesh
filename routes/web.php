@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ShopController;
 
 // Public Route
 Route::get('/', function () {
@@ -15,13 +16,13 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('about');
-});
-Route::get('/contact', function () {
+})->name('about');
+Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
-Route::get('/shop', function () {
-    return view('shop');
-})->name('shop');
+
+Route::get('/shop/{category?}', [ShopController::class, 'index'])->name('shop');
+Route::get('/shop/{id}', [ProductController::class, 'details'])->name('shop.details');
 
 // Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.detail');
 Route::get('/product-detail', [ProductController::class, 'show1'])->name('product.detail');

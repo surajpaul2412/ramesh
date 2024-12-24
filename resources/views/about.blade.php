@@ -12,7 +12,7 @@
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="index.html">Home</a><span class="delimiter"></span>About Us
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>About Us
 					</div>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 												</div>
 												<div class="box-title-wrap">
 													<h3 class="box-title">
-									 		 			Shipping Worldwide
+									 		 			925 Pure Silver
 													</h3>
 													<p class="box-description">
 											 			Lorem ipsum dolor sit amet, consectetur adipiscing elit 
@@ -106,7 +106,7 @@
 												</div>
 												<div class="box-title-wrap">
 													<h3 class="box-title">
-									 		 			14 Days Return 
+									 		 			15 Days Return 
 													</h3>
 													<p class="box-description">
 											 			Lorem ipsum dolor sit amet, consectetur adipiscing elit 
@@ -272,7 +272,7 @@
 							<div class="block block-newsletter layout-2 one-col">
 								<div class="block-widget-wrap">
 									<div class="newsletter-title-wrap">
-										<h2 class="newsletter-title">Latest From MoJuri!</h2>
+										<h2 class="newsletter-title">Latest From SwarnSilva!</h2>
 										<div class="newsletter-text">Sign-up to receive 10% off your next purchase. Plus hear about new arrivals and offers.</div>
 									</div>
 									<form action="#" method="post" class="newsletter-form">

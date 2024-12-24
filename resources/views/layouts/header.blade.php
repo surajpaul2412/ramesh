@@ -277,7 +277,7 @@
                             </ul>
                         </li>
                         <li class="level-0 menu-item menu-item-has-children">
-                            <a href="shop-grid-left.html"><span class="menu-item-text">Shop</span></a>
+                            <a href="{{route('shop')}}"><span class="menu-item-text">Shop</span></a>
                             <ul class="sub-menu">
                                 <li class="level-1 menu-item menu-item-has-children">
                                     <a href="shop-grid-left.html"><span class="menu-item-text">Shop - Products</span></a>
@@ -340,10 +340,10 @@
                             </ul>
                         </li> -->
                         <li class="level-0 menu-item">
-                            <a href=""><span class="menu-item-text">About Us</span></a>
+                            <a href="{{route('about')}}"><span class="menu-item-text">About Us</span></a>
                         </li>
                         <li class="level-0 menu-item">
-                            <a href=""><span class="menu-item-text">Our Products</span></a>
+                            <a href="{{route('shop')}}"><span class="menu-item-text">Our Products</span></a>
                         </li>
                         <li class="level-0 menu-item menu-item-has-children mega-menu mega-menu-fullwidth align-center">
                             <a href="blog-grid-left.html"><span class="menu-item-text">Blog</span></a>

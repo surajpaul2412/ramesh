@@ -66,7 +66,11 @@
 						</div>
 						@else
 						<div align="center" style="padding-bottom: 3rem;">
-							Please add products to wishlist.
+							<div class="empty_cart_page tc">
+								<h1 class="font-weight-bold">Wishlist is empty.</h1>
+								<div class="p-4">You don't have any products in the wishlist yet.<br> You will find a lot of interesting products on our "Shop" page.</div>
+								<a class="button button_primary" href="{{route('shop')}}">Return To Shop</a>
+						    </div>
 						</div>
 						@endif
 					</div>

@@ -15,11 +15,18 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('sku')->unique(); // Unique SKU for the product
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
+            $table->decimal('sale_price', 10, 2)->nullable(); // Sale price
+            $table->unsignedTinyInteger('rating')->default(0); // Product rating out of 5
+            $table->string('primary_image')->nullable(); // Main product image
+            $table->string('hover_image')->nullable(); // Hover product image
+            $table->string('label')->nullable(); // Labels like "Hot" or "-33%"
+            $table->boolean('is_featured')->default(false); // To mark product as featured
+            $table->unsignedBigInteger('stock')->default(0); // Stock quantity
             $table->unsignedBigInteger('type_id'); // Foreign key to types
             $table->unsignedBigInteger('category_id'); // Foreign key to categories
-            $table->string('image')->nullable();
             $table->timestamps();
 
             // Foreign key constraints

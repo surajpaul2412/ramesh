@@ -12,7 +12,7 @@
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="index.html">Home</a><span class="delimiter"></span>Contact Us
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>Contact Us
 					</div>
 				</div>
 			</div>

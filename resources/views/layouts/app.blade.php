@@ -34,11 +34,11 @@
             <!-- layout-wrap -->
            <div class="layout-wrap">
                 <!-- preload -->
-                <div id="preload" class="preload-container">
+                <!-- <div id="preload" class="preload-container">
                     <div class="preloading">
                         <span></span>
                     </div>
-                </div>
+                </div> -->
                 @include('layouts.sidebar')
                 <div class="section-content-right">
                     @include('layouts.navigation')

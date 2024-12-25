@@ -10,8 +10,8 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 header-center">
                         <div class="site-logo">
-                            <a href="index3.html">
-                                <img width="400" height="79" src="media/logo.jpg" alt="Mojuri – Jewelry Store HTML Template" />
+                            <a href="{{route('welcome')}}">
+                                <img width="400" height="79" src="{{asset('media/logo.jpg')}}" alt="" />
                             </a>
                         </div>
                     </div>
@@ -72,13 +72,13 @@
         <div class="header-mobile-fixed">
             <!-- Shop -->
             <div class="shop-page">
-                <a href="shop-grid-left.html"><i class="wpb-icon-shop"></i></a>
+                <a href="{{route('shop')}}"><i class="wpb-icon-shop"></i></a>
             </div>
 
             <!-- Login -->
             <div class="my-account">
                 <div class="login-header">
-                    <a href="page-my-account.html"><i class="wpb-icon-user"></i></a>
+                    <a href="{{route('login')}}"><i class="wpb-icon-user"></i></a>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
 
             <!-- Wishlist -->
             <div class="wishlist-box">
-                <a href="shop-wishlist.html"><i class="wpb-icon-heart"></i></a>
+                <a href="{{route('wishlist.index')}}"><i class="wpb-icon-heart"></i></a>
             </div>
         </div>
     </div>
@@ -110,8 +110,8 @@
 
                         <div class="col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 text-center header-center">
                             <div class="site-logo">
-                                <a href="index3.html">
-                                    <img width="400" height="80" src="media/logo.jpg" alt="Mojuri – Jewelry Store HTML Template" />
+                                <a href="{{route('welcome')}}">
+                                    <img width="400" height="80" src="{{asset('media/logo.jpg')}}" alt="" />
                                 </a>
                             </div>
                         </div>
@@ -176,8 +176,8 @@
                                 
                                 <!-- Wishlist -->
                                 <div class="wishlist-box">
-                                    <a href="shop-wishlist.html"><i class="icon-heart"></i></a>
-                                    <span class="count-wishlist">1</span>
+                                    <a href="{{route('wishlist.index')}}"><i class="icon-heart"></i></a>
+                                    <span class="count-wishlist">0</span>
                                 </div>
                                 
                                 <!-- Cart -->
@@ -222,8 +222,8 @@
                                                     <div class="total-percent"><div class="percent" style="width:20%"></div></div>
                                                 </div>
                                                 <div class="buttons">
-                                                    <a href="shop-cart.html" class="button btn view-cart btn-primary">View cart</a>
-                                                    <a href="shop-checkout.html" class="button btn checkout btn-default">Check out</a>
+                                                    <a href="{{route('cart.index')}}" class="button btn view-cart btn-primary">View cart</a>
+                                                    <a href="{{route('cart.checkout')}}" class="button btn checkout btn-default">Check out</a>
                                                 </div>
                                             </div>
                                         </div>

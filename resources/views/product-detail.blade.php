@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('title')
+{{$product->name}}
+@endsection
+
 @section('main')
 <div id="site-main" class="site-main">
 	<div id="main-content" class="main-content">
@@ -8,11 +12,11 @@
 				<div class="section-container">
 					<div class="content-title-heading">
 						<h1 class="text-title-heading">
-							Bora Armchair
+							{{$product->name}}
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="index.html">Home</a><span class="delimiter"></span><a href="shop-grid-left.html">Shop</a><span class="delimiter"></span>Bora Armchair
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span><a href="{{route('shop')}}">Shop</a><span class="delimiter"></span>{{$product->name}}
 					</div>
 				</div>
 			</div>
@@ -81,10 +85,10 @@
 									</div>
 
 									<div class="product-info col-lg-5 col-md-12 col-12 ">
-										<h1 class="title">Bora Armchair</h1>
+										<h1 class="title">{{$product->name}}</h1>
 										<span class="price">
-											<del aria-hidden="true"><span>$100.00</span></del> 
-											<ins><span>$90.00</span></ins>
+											<del aria-hidden="true"><span>₹{{$product->price}}</span></del> 
+											<ins><span>₹{{$product->sale_price}}</span></ins>
 										</span>
 										<div class="rating">
 											<div class="star star-5"></div>
@@ -108,16 +112,6 @@
 															</ul>
 														</td>
 													</tr>
-													<tr>
-														<td class="label">Color</td>
-														<td class="attributes">
-															<ul class="colors">
-																<li><span class="color-1"></span></li>
-																<li><span class="color-2"></span></li>
-																<li><span class="color-3"></span></li>
-															</ul>
-														</td>
-													</tr>
     											</tbody>
 											</table>
 										</div>
@@ -138,19 +132,15 @@
 											<div class="btn-wishlist" data-title="Wishlist">
 												<button class="product-btn">Add to wishlist</button>
 											</div>
-											<div class="btn-compare" data-title="Compare">
-												<button class="product-btn">Compare</button>
-											</div>
 										</div>
 										<div class="product-meta">
-											<span class="sku-wrapper">SKU: <span class="sku">D2300-3-2-2</span></span>
-											<span class="posted-in">Category: <a href="shop-grid-left.html" rel="tag">Bracelets</a></span>
-											<span class="tagged-as">Tags: <a href="shop-grid-left.html" rel="tag">Hot</a>, <a href="shop-grid-left.html" rel="tag">Trend</a></span>
+											<span class="sku-wrapper">SKU: <span class="sku">{{$product->sku}}</span></span>
+											<span class="posted-in">Category: <a href="shop-grid-left.html" rel="tag">{{$product->category->name}}</a></span>
 										</div>
 										<div class="social-share">
-											<a href="#" title="Facebook" class="share-facebook" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
-											<a href="#" title="Twitter" class="share-twitter"><i class="fa fa-twitter"></i>Twitter</a>
-											<a href="#" title="Pinterest" class="share-pinterest"><i class="fa fa-pinterest"></i>Pinterest</a>
+											<a href="https://wa.me/?text={{ urlencode('Check this out: ' . request()->fullUrl()) }}" title="Whatsapp" class="share-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i>Whatsapp</a>
+											<a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}&quote={{ urlencode('Check this out!') }}" title="Facebook" class="share-facebook" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
+											<a href="https://twitter.com/intent/tweet?text={{ urlencode('Check this out: ' . request()->fullUrl()) }}&hashtags=Example,Website&via=YourTwitterHandle" title="Twitter" class="share-twitter"><i class="fa fa-twitter"></i>Twitter</a>
 										</div>					
 									</div>
 								</div>
@@ -279,9 +269,6 @@
 																	<div class="btn-wishlist" data-title="Wishlist">
 																		<button class="product-btn">Add to wishlist</button>
 																	</div>
-																	<div class="btn-compare" data-title="Compare">
-																		<button class="product-btn">Compare</button>
-																	</div>
 																	<span class="product-quickview" data-title="Quick View">
 																		<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
 																	</span>		
@@ -318,9 +305,6 @@
 																	</div>
 																	<div class="btn-wishlist" data-title="Wishlist">
 																		<button class="product-btn">Add to wishlist</button>
-																	</div>
-																	<div class="btn-compare" data-title="Compare">
-																		<button class="product-btn">Compare</button>
 																	</div>
 																	<span class="product-quickview" data-title="Quick View">
 																		<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -359,9 +343,6 @@
 																	<div class="btn-wishlist" data-title="Wishlist">
 																		<button class="product-btn">Add to wishlist</button>
 																	</div>
-																	<div class="btn-compare" data-title="Compare">
-																		<button class="product-btn">Compare</button>
-																	</div>
 																	<span class="product-quickview" data-title="Quick View">
 																		<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
 																	</span>		
@@ -398,9 +379,6 @@
 																	</div>
 																	<div class="btn-wishlist" data-title="Wishlist">
 																		<button class="product-btn">Add to wishlist</button>
-																	</div>
-																	<div class="btn-compare" data-title="Compare">
-																		<button class="product-btn">Compare</button>
 																	</div>
 																	<span class="product-quickview" data-title="Quick View">
 																		<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
@@ -441,9 +419,6 @@
 																	</div>
 																	<div class="btn-wishlist" data-title="Wishlist">
 																		<button class="product-btn">Add to wishlist</button>
-																	</div>
-																	<div class="btn-compare" data-title="Compare">
-																		<button class="product-btn">Compare</button>
 																	</div>
 																	<span class="product-quickview" data-title="Quick View">
 																		<a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>

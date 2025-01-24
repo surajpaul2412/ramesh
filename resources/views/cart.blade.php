@@ -12,7 +12,7 @@
 						</h1>
 					</div>
 					<div class="breadcrumbs">
-						<a href="index.html">Home</a><span class="delimiter"></span><span class="delimiter"></span>Shopping Cart
+						<a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>Shopping Cart
 					</div>
 				</div>
 			</div>
@@ -43,21 +43,21 @@
 																<img width="600" height="600" src="media/product/1.jpg" class="product-image" alt="">
 															</a>				
 															<div class="product-name">
-																<a href="shop-details.html">Medium Flat Hoops</a>
+																<a href="shop-details.html">{{$item->product->name}}</a>
 															</div>
 														</td>
 														<td class="product-price">
-															<span>$180.00</span>
+															<span>₹{{$item->product->sale_price}}</span>
 														</td>
 														<td class="product-quantity">
 															<div class="quantity">
 																<button type="button" class="minus">-</button>	
-																<input type="number" class="qty" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" placeholder="" inputmode="numeric" autocomplete="off">
+																<input type="number" class="qty" step="1" min="0" max="" name="quantity" value="{{$item->quantity}}" title="Qty" size="4" placeholder="" inputmode="numeric" autocomplete="off">
 																<button type="button" class="plus">+</button>
 															</div>
 														</td>
 														<td class="product-subtotal">
-															<span class="price">$180.00</span>
+															<span class="price">₹{{ number_format($item->quantity * $item->product->sale_price, 2) }}</span>
 														</td>
 														<td class="product-remove">
 															<form action="{{ route('cart.remove', $item->id) }}" method="POST">
@@ -75,8 +75,6 @@
 																	<input type="text" name="coupon_code" class="input-text" id="coupon-code" value="" placeholder="Coupon code"> 
 																	<button type="submit" name="apply_coupon" class="button" value="Apply coupon">Apply coupon</button>
 																</div>
-																<h2><a href="shop-grid-left.html">Continue Shopping</a></h2>
-																<button type="submit" name="update_cart" class="button" value="Update cart">Update cart</button>
 															</div>	
 														</td>
 													</tr>
@@ -91,31 +89,16 @@
 										<div>
 											<div class="cart-subtotal">
 												<div class="title">Subtotal</div>
-												<div><span>$480.00</span></div>
+												<div><span>₹{{ number_format(calculateCartTotal(), 2) }}</span></div>
 											</div>
-											<div class="shipping-totals">
-												<div class="title">Shipping</div>
-												<div>
-													<ul class="shipping-methods custom-radio">
-														<li>
-															<input type="radio" name="shipping_method" data-index="0" value="free_shipping" class="shipping_method" checked="checked"><label>Free shipping</label>
-														</li>
-														<li>
-															<input type="radio" name="shipping_method" data-index="0" value="flat_rate" class="shipping_method"><label>Flat rate</label>					
-														</li>
-													</ul>
-													<p class="shipping-desc">
-														Shipping options will be updated during checkout.				
-													</p>
-												</div>
-											</div>
+											<hr>
 											<div class="order-total">
 												<div class="title">Total</div>
-												<div><span>$480.00</span></div>
+												<div><span>₹{{ number_format(calculateCartTotal(), 2) }}</span></div>
 											</div>
 										</div>
 										<div class="proceed-to-checkout">		
-											<a href="shop-checkout.html" class="checkout-button button">
+											<a href="{{route('cart.checkout')}}" class="checkout-button button">
 												Proceed to checkout
 											</a>
 										</div>

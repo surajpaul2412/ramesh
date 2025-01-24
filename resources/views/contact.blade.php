@@ -92,7 +92,8 @@
 										<div class="sub-title">We’ll get back to you within two days.</div>
 									</div>
 									<div class="block-content">
-										<form action="#" method="post" class="contact-form" novalidate="novalidate">
+										<form action="{{ route('contact.store') }}" method="post" class="contact-form" novalidate="novalidate">
+											@csrf
 											<div class="contact-us-form">
 												<div class="row">
 													<div class="col-sm-12 col-md-4">

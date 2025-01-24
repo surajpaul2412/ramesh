@@ -8,6 +8,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AddressController;
 
 // Public Route
 Route::get('/', function () {
@@ -17,16 +20,21 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
 Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');
+Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
 Route::get('/shop/{category?}', [ShopController::class, 'index'])->name('shop');
 Route::get('/shop/{id}', [ProductController::class, 'details'])->name('shop.details');
 
-// Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.detail');
-Route::get('/product-detail', [ProductController::class, 'show1'])->name('product.detail');
-
+Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.detail');
+// Route::get('/product-detail', [ProductController::class, 'show1'])->name('product.detail');
+Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
 
 // Fallback route
 Route::fallback(function () {
@@ -60,6 +68,10 @@ Route::middleware('auth')->group(function () {
     // Checkout
     Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
     Route::post('/checkout', [CartController::class, 'processCheckout'])->name('cart.processCheckout');
+
+    // Address
+    Route::post('/address/store', [AddressController::class, 'store'])->name('address.store');
+    Route::delete('/address/remove/{id}', [AddressController::class, 'remove'])->name('address.remove');
 });
 
 // Profile Routes (Common for All Authenticated Users)

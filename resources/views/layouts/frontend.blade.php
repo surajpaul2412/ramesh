@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{env('APP_NAME')}}</title>
-        
+        <title>{{env('APP_NAME')}} | @yield('title')</title>
+
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="media/favicon.png">
         
@@ -146,7 +146,7 @@
                     </div>
                     <div class="wishlist-popup-content-bot">
                         <div class="wishlist-popup-content-bot-inner">
-                            <a class="wishlist-page" href="shop-wishlist.html">
+                            <a class="wishlist-page" href="{{route('wishlist.index')}}">
                                 Open wishlist page                                    
                             </a>
                             <span class="wishlist-continue" data-url="">

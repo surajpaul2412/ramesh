@@ -275,8 +275,9 @@
 										<h2 class="newsletter-title">Latest From SwarnSilva!</h2>
 										<div class="newsletter-text">Sign-up to receive 10% off your next purchase. Plus hear about new arrivals and offers.</div>
 									</div>
-									<form action="#" method="post" class="newsletter-form">
-										<input type="email" name="your-email" value="" size="40" placeholder="Email address">
+									<form action="{{ route('subscribe') }}" method="post" class="newsletter-form">
+										@csrf
+										<input type="email" name="email" value="" size="40" placeholder="Email address" required>
 										<span class="btn-submit">
 											<input type="submit" value="SUBSCRIBE">
 										</span>

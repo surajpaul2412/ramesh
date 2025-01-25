@@ -11,7 +11,7 @@ class ShopController extends Controller
     public function index($category = 'all')
     {
         if ($category === 'all') {
-            $products = Product::all();
+            $products = Product::paginate(12);
         } else {
             // $products = Product::where('category', $category)->get();
             // Fetch products based on category
@@ -22,7 +22,7 @@ class ShopController extends Controller
                 abort(404, 'Category not found');
             }
 
-            $products = Product::where('category_id', $categoryData->id)->get();
+            $products = Product::where('category_id', $categoryData->id)->paginate(12);
         }
 
         return view('shop', compact('products', 'category'));

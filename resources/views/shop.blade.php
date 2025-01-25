@@ -177,19 +177,8 @@
 								</div>
 
 								<div class="pagination">
-    {!! $products->links() !!}
-</div>
-
-								<nav class="pagination">
-
-									<ul class="page-numbers">
-										<li><a class="prev page-numbers" href="#">Previous</a></li>
-										<li><span aria-current="page" class="page-numbers current">1</span></li>
-										<li><a class="page-numbers" href="#">2</a></li>
-										<li><a class="page-numbers" href="#">3</a></li>
-										<li><a class="next page-numbers" href="#">Next</a></li>
-									</ul>
-								</nav>
+								    {!! $products->links() !!}
+								</div>
 							</div>
 						</div>
 					</div>

@@ -12,7 +12,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('type', 'category')->paginate(10); // Fetch 10 products per page
+        dd("hi");
+        $products = Product::with('type', 'category')->get(); // Fetch 10 products per page
         dd($products);
         return view('products.index', compact('products'));
     }

@@ -242,108 +242,33 @@
                         <li class="level-0 menu-item menu-item-has-children">
                             <a href="shop-grid-left.html"><span class="menu-item-text">Our Collections</span></a>
                             <ul class="sub-menu">
-                                <li class="level-1 menu-item menu-item-has-children">
+                                <!-- <li class="level-1 menu-item menu-item-has-children">
                                     <a href="shop-grid-left.html"><span class="menu-item-text">Shop - Products</span></a>
                                     <ul class="sub-menu">
                                         <li>
                                             <a href="shop-grid-left.html"><span class="menu-item-text">Shop Grid - Left Sidebar</span></a>
                                         </li>
-                                        <li>
-                                            <a href="shop-list-left.html"><span class="menu-item-text">Shop List - Left Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"><span class="menu-item-text">Shop Grid - Right Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-list-right.html"><span class="menu-item-text">Shop List - Right Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-fullwidth.html"><span class="menu-item-text">Shop Grid - No Sidebar</span></a>
-                                        </li>
                                     </ul>
-                                </li>
+                                </li> -->
+                                @foreach(types() as $type)
                                 <li>
-                                    <a href="shop-details.html"><span class="menu-item-text">Shop Details</span></a>
+                                    <a href="{{route('shop')}}"><span class="menu-item-text">Collections for <strong>{{$type->name}}</strong></span></a>
                                 </li>
-                                <li>
-                                    <a href="shop-cart.html"><span class="menu-item-text">Shop - Cart</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop-checkout.html"><span class="menu-item-text">Shop - Checkout</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop-wishlist.html"><span class="menu-item-text">Shop - Wishlist</span></a>
-                                </li>
+                                @endforeach
                             </ul>
+                        </li>
+                        <li class="level-0 menu-item">
+                            <a href="{{route('shop')}}"><span class="menu-item-text">Shop</span></a>
                         </li>
                         <li class="level-0 menu-item menu-item-has-children">
-                            <a href="{{route('shop')}}"><span class="menu-item-text">Shop</span></a>
-                            <ul class="sub-menu">
-                                <li class="level-1 menu-item menu-item-has-children">
-                                    <a href="shop-grid-left.html"><span class="menu-item-text">Shop - Products</span></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="shop-grid-left.html"><span class="menu-item-text">Shop Grid - Left Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-list-left.html"><span class="menu-item-text">Shop List - Left Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"><span class="menu-item-text">Shop Grid - Right Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-list-right.html"><span class="menu-item-text">Shop List - Right Sidebar</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-fullwidth.html"><span class="menu-item-text">Shop Grid - No Sidebar</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="shop-details.html"><span class="menu-item-text">Shop Details</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop-cart.html"><span class="menu-item-text">Shop - Cart</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop-checkout.html"><span class="menu-item-text">Shop - Checkout</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop-wishlist.html"><span class="menu-item-text">Shop - Wishlist</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- <li class="level-0 menu-item menu-item-has-children">
-                            <a href="#"><span class="menu-item-text">Pages</span></a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="page-login.html"><span class="menu-item-text">Login / Register</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-forgot-password.html"><span class="menu-item-text">Forgot Password</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-my-account.html"><span class="menu-item-text">My Account</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-about.html"><span class="menu-item-text">About Us</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html"><span class="menu-item-text">Contact</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-faq.html"><span class="menu-item-text">FAQ</span></a>
-                                </li>
-                                <li>
-                                    <a href="page-404.html"><span class="menu-item-text">Page 404</span></a>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li class="level-0 menu-item">
-                            <a href="{{route('about')}}"><span class="menu-item-text">About Us</span></a>
-                        </li>
-                        <li class="level-0 menu-item">
                             <a href="{{route('shop')}}"><span class="menu-item-text">Our Products</span></a>
+                            <ul class="sub-menu">
+                                @foreach(categories() as $category)
+                                <li>
+                                    <a href="{{route('shop', $category->slug)}}"><span class="menu-item-text">{{$category->name}}</span></a>
+                                </li>
+                                @endforeach
+                            </ul>
                         </li>
                         <li class="level-0 menu-item menu-item-has-children mega-menu mega-menu-fullwidth align-center">
                             <a href="blog-grid-left.html"><span class="menu-item-text">Blog</span></a>
@@ -408,6 +333,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </li>
+                        <li class="level-0 menu-item">
+                            <a href="{{route('about')}}"><span class="menu-item-text">About Us</span></a>
                         </li>
                         <li class="level-0 menu-item">
                             <a href="{{route('contact')}}"><span class="menu-item-text">Contact Us</span></a>

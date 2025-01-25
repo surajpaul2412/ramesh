@@ -28,24 +28,11 @@
 									<div class="block-content">
 										<div class="product-cats-list">
 											<ul>
+												@foreach(categories() as $category)
 												<li class="current">
-													<a href="shop-grid-left.html">Bracelets <span class="count">9</span></a>
+													<a href="{{route('shop', $category->slug)}}">{{$category->name}} <span class="count">{{$category->products->count()}}</span></a>
 												</li>
-												<li>
-													<a href="shop-grid-left.html">Earrings <span class="count">4</span></a>
-												</li>
-												<li>
-													<a href="shop-grid-left.html">Necklaces <span class="count">3</span></a>
-												</li>
-												<li>
-													<a href="shop-grid-left.html">Charms <span class="count">6</span></a>
-												</li>
-												<li>
-													<a href="shop-grid-left.html">Rings <span class="count">2</span></a>
-												</li>
-												<li>
-													<a href="shop-grid-left.html">Wedding & Bridal <span class="count">4</span></a>
-												</li>
+												@endforeach
 											</ul>
 										</div>
 									</div>
@@ -66,30 +53,18 @@
 									</div>
 								</div>
 
-								<!-- Block Product Filter -->
-								<div class="block block-product-filter clearfix">
-									<div class="block-title"><h2>Color</h2></div>
+								<div class="block block-product-cats">
+									<div class="block-title"><h2>Types</h2></div>
 									<div class="block-content">
-										<ul class="filter-items color">
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color antique"></span>Antique</span><span class="count">3</span></a></li>
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color bone"></span>Bone</span><span class="count">2</span></a></li>
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color chestnut"></span>Chestnut</span><span class="count">5</span></a></li>
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color crimson"></span>Crimson</span><span class="count">8</span></a></li>
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color eggshell"></span>Eggshell</span><span class="count">3</span></a></li>
-											<li><a href="shop-grid-left.html"><span class="color-wrap"><span class="color grullo"></span>Grullo</span><span class="count">4</span></a></li>
-										</ul>
-									</div>
-								</div>
-
-								<!-- Block Product Filter -->
-								<div class="block block-product-filter clearfix">
-									<div class="block-title"><h2>Size</h2></div>
-									<div class="block-content">
-										<ul class="filter-items text">
-											<li><a href="shop-grid-left.html"><span>L</span></a></li>
-											<li><a href="shop-grid-left.html"><span>M</span></a></li>
-											<li><a href="shop-grid-left.html"><span>S</span></a></li>
-										</ul>
+										<div class="product-cats-list">
+											<ul>
+												@foreach(types() as $type)
+												<li class="current">
+													<a href="{{route('shop', $category->slug)}}">{{$type->name}} <span class="count">{{$type->products->count()}}</span></a>
+												</li>
+												@endforeach
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>

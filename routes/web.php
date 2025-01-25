@@ -29,8 +29,9 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.ind
 Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');
 Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
-Route::get('/shop/{category?}', [ShopController::class, 'index'])->name('shop');
-Route::get('/shop/{id}', [ProductController::class, 'details'])->name('shop.details');
+Route::get('/shop', [ShopController::class, 'index'])->name('shop');
+// Route::get('/shop/{category?}', [ShopController::class, 'index'])->name('shop');
+// Route::get('/shop/{id}', [ProductController::class, 'details'])->name('shop.details');
 
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.detail');
 // Route::get('/product-detail', [ProductController::class, 'show1'])->name('product.detail');

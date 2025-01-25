@@ -430,5 +430,7 @@
                 "hideMethod": "fadeOut"
             };
         </script>
+
+        @yield('script')
     </body>
 </html>

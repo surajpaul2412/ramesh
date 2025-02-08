@@ -252,7 +252,7 @@
                                 </li> -->
                                 @foreach(types() as $type)
                                 <li>
-                                    <a href="{{route('shop')}}"><span class="menu-item-text">Collections for <strong>{{$type->name}}</strong></span></a>
+                                    <a href="{{route('type', $type->slug)}}"><span class="menu-item-text">Collections for <strong>{{$type->name}}</strong></span></a>
                                 </li>
                                 @endforeach
                             </ul>

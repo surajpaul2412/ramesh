@@ -265,7 +265,7 @@
                             <ul class="sub-menu">
                                 @foreach(categories() as $category)
                                 <li>
-                                    <a href="{{route('shop', $category->slug)}}"><span class="menu-item-text">{{$category->name}}</span></a>
+                                    <a href="{{route('category', $category->slug)}}"><span class="menu-item-text">{{$category->name}}</span></a>
                                 </li>
                                 @endforeach
                             </ul>

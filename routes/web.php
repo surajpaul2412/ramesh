@@ -30,6 +30,8 @@ Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts
 Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
+Route::get('/category/{slug}', [ShopController::class, 'category'])->name('category');
+Route::get('/type/{slug}', [ShopController::class, 'type'])->name('type');
 // Route::get('/shop/{category?}', [ShopController::class, 'index'])->name('shop');
 // Route::get('/shop/{id}', [ProductController::class, 'details'])->name('shop.details');
 

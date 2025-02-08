@@ -34,7 +34,7 @@ class ShopController extends Controller
         }
 
         // Paginate the results
-        $products = $query->paginate(3);
+        $products = $query->paginate(12);
 
         // Fetch all categories and types for filters
         $categories = Category::all();
@@ -47,5 +47,25 @@ class ShopController extends Controller
 
         // For non-AJAX requests, return the full view
         return view('shop', compact('products', 'categories', 'types'));
+    }
+
+    public function category($slug) {
+        $category = Category::where('slug', $slug)->firstOrFail();
+
+        // Fetch products that belong to the category
+        $products = Product::where('category_id', $category->id)->with('type', 'category')->paginate(12);
+
+        // Return the view with products and category data
+        return view('category', compact('category', 'products'));
+    }
+
+    public function type($slug) {
+        $type = Type::where('slug', $slug)->firstOrFail();
+
+        // Fetch products that belong to the type
+        $products = Product::where('type_id', $type->id)->with('type', 'category')->paginate(12);
+
+        // Return the view with products and category data
+        return view('type', compact('type', 'products'));
     }
 }

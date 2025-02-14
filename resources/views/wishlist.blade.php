@@ -19,7 +19,7 @@
 
 			<div id="content" class="site-content" role="main">
 				<div class="section-padding">
-					<div class="section-container p-l-r">
+					<div class="section-container p-l-r" style="margin-bottom: 60px;">
 						@if($wishlistItems->count())
 						<div class="shop-wishlist">	
 							<table class="wishlist-items">                            
@@ -36,7 +36,7 @@
 						                    </form>
 										</td>
 										<td class="wishlist-item-image">
-	                                        <a href="shop-details.html">
+	                                        <a href="{{route('product.detail', $item->product->slug)}}">
 												<img width="600" height="600" src="media/product/3.jpg" alt="">
 											</a>
                            				</td>
@@ -45,9 +45,9 @@
 												<a href="shop-details.html">{{ $item->product->name }}</a>
 											</div>
 											<div class="wishlist-item-price">
-												<span>$150.00</span>
+												<span>${{ $item->product->sale_price }}</span>
 											</div>
-											<div class="wishlist-item-time">June 6, 2022</div>
+											<div class="wishlist-item-time">{{$item->product->created_at->format('M d, Y')}}</div>
 										</td>
                     					<td class="wishlist-item-actions">
                         					<div class="wishlist-item-stock">

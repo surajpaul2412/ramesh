@@ -27,7 +27,7 @@
                                         <ul class="cart-list">
                                             <li class="empty">
                                                 <span>No products in the cart.</span>
-                                                <a class="go-shop" href="shop-grid-left.html">GO TO SHOP<i aria-hidden="true" class="arrow_right"></i></a>
+                                                <a class="go-shop" href="{{route('shop')}}">GO TO SHOP<i aria-hidden="true" class="arrow_right"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -120,64 +120,17 @@
                             <div class="header-page-link">
                                 <!-- Login -->
                                 <div class="login-header icon">
-                                    <a class="active-login" href="#"><i class="icon-user"></i></a>
-                                    <div class="form-login-register">
-                                        <div class="box-form-login">
-                                            <div class="active-login"></div>
-                                            <div class="box-content">
-                                                <div class="form-login active">
-                                                    <form id="login_ajax" method="post" class="login">
-                                                        <h2>Sign in</h2>
-                                                        <p class="status"></p>
-                                                        <div class="content">
-                                                            <div class="username">
-                                                                <input type="text" required="required" class="input-text" name="username" id="username" placeholder="Your name"/>
-                                                            </div>
-                                                            <div class="password">
-                                                                <input class="input-text" required="required" type="password" name="password" id="password" placeholder="Password"/>
-                                                            </div>
-                                                            <div class="rememberme-lost">
-                                                                <div class="rememberme">
-                                                                    <input name="rememberme" type="checkbox" id="rememberme" value="forever"/>
-                                                                    <label for="rememberme" class="inline">Remember me</label>
-                                                                </div>
-                                                                <div class="lost_password">
-                                                                    <a href="forgot-password.html">Lost your password?</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="button-login">
-                                                                <input type="submit" class="button" name="login" value="Login"/>
-                                                            </div>
-                                                            <div class="button-next-reregister">Create An Account</div>
-                                                        </div>                      
-                                                    </form>
-                                                </div>
-                                                <div class="form-register">
-                                                    <form method="post" class="register">
-                                                        <h2>REGISTER</h2>
-                                                        <div class="content">
-                                                            <div class="email">
-                                                                <input type="email" class="input-text" placeholder="Email" name="email" id="reg_email" value=""/>
-                                                            </div>
-                                                            <div class="password">
-                                                                <input type="password" class="input-text" placeholder="Password" name="password" id="reg_password"/>
-                                                            </div>                                                          
-                                                            <div class="button-register">
-                                                                <input type="submit" class="button" name="register" value="Register"/>
-                                                            </div>
-                                                            <div class="button-next-login">Already has an account</div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @auth
+                                        <a href="{{ route('customer.dashboard') }}"><i class="icon-user"></i></a>
+                                    @else
+                                        <a href="{{route('login')}}"><i class="icon-user"></i></a>
+                                    @endauth
                                 </div>
                                 
                                 <!-- Wishlist -->
                                 <div class="wishlist-box">
                                     <a href="{{route('wishlist.index')}}"><i class="icon-heart"></i></a>
-                                    <span class="count-wishlist">0</span>
+                                    <span class="count-wishlist">{{count(getWishlistProducts())}}</span>
                                 </div>
                                 
                                 <!-- Cart -->
@@ -192,7 +145,7 @@
                                                 <ul class="cart-list">
                                                     <li class="empty">
                                                         <span>No products in the cart.</span>
-                                                        <a class="go-shop" href="shop-grid-left.html">GO TO SHOP<i aria-hidden="true" class="arrow_right"></i></a>
+                                                        <a class="go-shop" href="{{route('shop')}}">GO TO SHOP<i aria-hidden="true" class="arrow_right"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -356,7 +309,7 @@
                                     <div class="box">
                                         <div class="box-icon">
                                             <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"id="Layer_1"x="0px"y="0px"viewBox="0 0 512 512"style="enable-background:new 0 0 512 512;"xml:space="preserve"><g><g><path d="M509.473,256.394l-59.391-67.801c-1.937-2.21-4.733-3.479-7.672-3.479h-49.455v-41.872    c0-5.633-4.567-10.199-10.199-10.199H172.109c-5.632,0-10.199,4.566-10.199,10.199v13.762H63.818    c-5.632,0-10.199,4.566-10.199,10.199c0,5.633,4.567,10.199,10.199,10.199h98.092v132.21h-59.046    c-5.632,0-10.199,4.566-10.199,10.199c0,5.633,4.567,10.199,10.199,10.199h59.046v10.365c0,5.633,4.567,10.199,10.199,10.199    h21.288c4.485,16.339,19.459,28.382,37.203,28.382c17.744,0,32.718-12.043,37.204-28.382h136.089v-0.001    c4.485,16.339,19.459,28.382,37.203,28.382c17.744,0,32.718-12.043,37.204-28.382h23.502c5.632,0,10.199-4.566,10.199-10.199    v-77.261C512,260.642,511.101,258.253,509.473,256.394z M230.6,358.558c-10.026,0-18.182-8.157-18.182-18.183    s8.156-18.183,18.182-18.183s18.183,8.157,18.183,18.183S240.626,358.558,230.6,358.558z M267.802,330.176    c-4.485-16.339-19.46-28.382-37.204-28.382s-32.717,12.043-37.203,28.382h-11.089V153.44h190.247v176.736H267.802z     M441.094,358.558c-10.026,0-18.182-8.157-18.182-18.183s8.156-18.183,18.182-18.183c10.026,0,18.183,8.157,18.183,18.183    S451.121,358.558,441.094,358.558z M491.602,330.176h-13.304c-4.485-16.339-19.46-28.382-37.204-28.382    c-17.744,0-32.717,12.043-37.203,28.382h-10.939V205.512h44.831l53.818,61.437V330.176z"></path></g></g><g><g><path d="M69.261,309.611h-5.442c-5.632,0-10.199,4.566-10.199,10.199c0,5.633,4.567,10.199,10.199,10.199h5.442    c5.632,0,10.199-4.566,10.199-10.199C79.46,314.177,74.894,309.611,69.261,309.611z"></path></g></g><g><g><path d="M119.5,232.276H10.199C4.567,232.276,0,236.842,0,242.475c0,5.633,4.567,10.199,10.199,10.199H119.5    c5.632,0,10.199-4.566,10.199-10.199C129.699,236.842,125.132,232.276,119.5,232.276z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"><g><g><path d="M457.987,31.531c-2.688-6.997-13.013-8.533-17.749-3.499c-21.44,18.88-48.939,29.248-77.547,29.248    c-39.424,0-75.989-19.627-97.771-52.501C262.937,1.792,259.609,0,256.025,0c-3.563,0-6.912,1.792-8.875,4.757    c-21.845,32.875-58.411,52.501-97.835,52.501c-28.928,0-56.704-10.603-78.208-29.867c-3.136-2.816-7.616-3.499-11.477-1.792    c-3.84,1.707-6.315,5.525-6.315,9.728v231.317c0,133.205,189.44,239.552,197.504,244.011c1.6,0.896,3.392,1.344,5.163,1.344    c1.771,0,3.563-0.448,5.163-1.301c8.064-4.459,197.504-110.827,197.504-244.011v-230.4    C458.777,34.688,458.563,33.067,457.987,31.531z M437.315,266.667c0,109.163-151.232,204.459-181.333,222.336    C225.859,471.125,74.649,375.936,74.649,266.667V56.811c22.165,14.165,48,21.803,74.667,21.803    c41.579,0,80.469-18.496,106.667-50.091c26.24,31.616,65.131,50.091,106.709,50.091c26.645,0,52.48-7.637,74.624-21.781V266.667z"></path></g></g><g><g><path d="M327.577,195.136c-4.16-4.16-10.923-4.16-15.083,0l-77.845,77.781l-35.072-35.115c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.139-4.16,10.923,0,15.083l42.581,42.667c2.005,1.984,4.715,3.115,7.552,3.115s5.547-1.131,7.531-3.115l85.419-85.333    C331.737,206.059,331.737,199.296,327.577,195.136z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
                                             </span>
                                         </div>
                                         <div class="box-title-wrap">

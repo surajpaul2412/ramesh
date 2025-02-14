@@ -27,11 +27,13 @@ return new class extends Migration
             $table->unsignedBigInteger('stock')->default(0); // Stock quantity
             $table->unsignedBigInteger('type_id'); // Foreign key to types
             $table->unsignedBigInteger('category_id'); // Foreign key to categories
+            $table->unsignedBigInteger('sub_category_id'); // Foreign key to categories
             $table->timestamps();
 
             // Foreign key constraints
             $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
         });
     }
 

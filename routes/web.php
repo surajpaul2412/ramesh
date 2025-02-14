@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/about', function () { return view('about'); })->name('about');
+Route::get('/privacy-policy', function () { return view('privacy-policy'); })->name('privacy-policy');
+Route::get('/return-policy', function () { return view('return-policy'); })->name('return-policy');
+Route::get('/term-conditions', function () { return view('term-conditions'); })->name('term-conditions');
 
 Route::get('/contact-us', function () {
     return view('contact');

@@ -99,21 +99,11 @@
 										<div class="description">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 										</div>
-										<div class="variations">
-											<table cellspacing="0">
-												<tbody>
-													<tr>
-														<td class="label">Size</td>
-														<td class="attributes">
-															<ul class="text">
-																<li><span>L</span></li>
-																<li><span>M</span></li>
-																<li><span>S</span></li>
-															</ul>
-														</td>
-													</tr>
-    											</tbody>
-											</table>
+										<div class="row" style="margin-bottom: 30px;">
+											<div class="col-md-6 col-12">Easy 30 Day Return</div>
+											<div class="col-md-6 col-12">Lifetime Plating</div>
+											<div class="col-md-6 col-12">6-Month Warranty</div>
+											<div class="col-md-6 col-12">Fine 925 Silver</div>
 										</div>
 										<div class="buttons">
 											<div class="add-to-cart-wrap">

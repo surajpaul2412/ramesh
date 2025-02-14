@@ -4,6 +4,8 @@ use App\Models\Type;
 use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\Wishlist;
+use Illuminate\Support\Facades\Auth;
 
 function types() {
     $types = Type::all();
@@ -13,6 +15,16 @@ function types() {
 function categories() {
     $categories = Category::all();
     return $categories;
+}
+
+if (!function_exists('getWishlistProducts')) {
+    function getWishlistProducts()
+    {
+        if (Auth::check()) {
+            return Wishlist::where('user_id', Auth::id())->with('product')->get();
+        }
+        return collect(); // Return empty collection if not authenticated
+    }
 }
 
 if (!function_exists('calculateCartTotal')) {

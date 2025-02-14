@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('title')
+Customer Dashboard
+@endsection
+
 @section('main')
 <div id="site-main" class="site-main">
     <div id="main-content" class="main-content">
@@ -12,7 +16,7 @@
                         </h1>
                     </div>
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><span class="delimiter"></span>My Account
+                        <a href="{{route('welcome')}}">Home</a><span class="delimiter"></span>My Account
                     </div>
                 </div>
             </div>

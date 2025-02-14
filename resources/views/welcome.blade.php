@@ -666,15 +666,17 @@
                                 <div class="row">
                                     <div class="section-column left">
                                         <div class="intro-wrap">
-                                            <h2 class="intro-title">It started with love</h2>
+                                            <h2 class="intro-title">Why Choose Swarnsilva?</h2>
                                             <div class="intro-item">
-                                                Behind our 15-year success is our panel of expert jewellers who have been scouring the entire globe in pursuit of the best and most stunning jewellery that can be offered at affordable price for you. 
+                                                At Swarnsilva, we aim to make luxury silver jewelry accessible to all. We strive to create designs that inspire confidence, elevate your style, and become a cherished part of your journey. Whether you prefer classic Indian motifs or sleek international aesthetics, our collection has something for everyone.
                                             </div>
                                             <div class="intro-item">
-                                                Visit our online catalogue and shop for the finest earrings, rings, bracelets, watches, silver, and the most luxurious gemstones. 
+                                                ✨ Foreign-inspired designs –<br/>
+                                                ✨ Lightweight elegance –<br/>
+                                                ✨ Timeless & Trendy Creations –
                                             </div>
                                             <div class="intro-btn">
-                                                <a href="page-about.html" class="button button-primary animation-horizontal">About Us</a>
+                                                <a href="{{route('about')}}" class="button button-primary animation-horizontal">About Us</a>
                                             </div>
                                         </div>
                                     </div>

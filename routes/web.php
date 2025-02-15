@@ -11,20 +11,17 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\TypeController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 
 // Public Route
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-
+Route::get('/', function () { return view('welcome'); })->name('welcome');
 Route::get('/about', function () { return view('about'); })->name('about');
 Route::get('/privacy-policy', function () { return view('privacy-policy'); })->name('privacy-policy');
 Route::get('/return-policy', function () { return view('return-policy'); })->name('return-policy');
 Route::get('/term-conditions', function () { return view('term-conditions'); })->name('term-conditions');
-
-Route::get('/contact-us', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact-us', function () { return view('contact'); })->name('contact');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');
@@ -46,9 +43,22 @@ Route::fallback(function () {
 });
 
 // Admin Routes
-Route::middleware(['isAdmin'])->group(function () {
+Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
     // Dashboard
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('/types', [TypeController::class, 'index'])->name('admin.types.index');
+    Route::get('/types/create', [TypeController::class, 'create'])->name('admin.types.create');
+    Route::post('/types', [TypeController::class, 'store'])->name('admin.types.store');
+    Route::get('/types/{type}/edit', [TypeController::class, 'edit'])->name('admin.types.edit');
+    Route::put('/types/{type}', [TypeController::class, 'update'])->name('admin.types.update');
+    Route::delete('/types/{type}', [TypeController::class, 'destroy'])->name('admin.types.destroy');
+
+    Route::resource('/categories', CategoryController::class)->except(['show']);
+    Route::resource('/subcategories', SubCategoryController::class);
+
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.products');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
 });
 
 // Customer Routes

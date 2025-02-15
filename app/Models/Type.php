@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name','slug','image'];
 
     // Define relationship with products
     public function products()

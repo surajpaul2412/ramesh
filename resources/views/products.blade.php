@@ -30,9 +30,15 @@
                                     <div class="btn-add-to-cart" data-title="Add to cart">
                                         <a rel="nofollow" href="{{ route('cart.add', $product->id) }}" class="product-btn button">Add to cart</a>
                                     </div>
+                                    @if(isInWishlist($product->id))
+                                    <div class="btn-wishlist" data-title="Wishlist">
+                                        <button class="product-btn active">Add to wishlist</button>
+                                    </div>
+                                    @else
                                     <div class="btn-wishlist" data-title="Wishlist">
                                         <button class="product-btn">Add to wishlist</button>
                                     </div>
+                                    @endif
                                     <span class="product-quickview" data-title="Quick View">
                                         <a href="#" class="quickview quickview-button">Quick View <i class="icon-search"></i></a>
                                     </span>     

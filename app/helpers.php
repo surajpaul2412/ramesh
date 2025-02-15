@@ -27,6 +27,16 @@ if (!function_exists('getWishlistProducts')) {
     }
 }
 
+if (!function_exists('isInWishlist')) {
+    function isInWishlist($productId)
+    {
+        if (Auth::check()) {
+            return Wishlist::where('user_id', Auth::id())->where('product_id', $productId)->exists();
+        }
+        return false;
+    }
+}
+
 if (!function_exists('calculateCartTotal')) {
     /**
      * Calculate the total amount of the cart for the authenticated user.

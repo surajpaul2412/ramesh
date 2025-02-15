@@ -500,6 +500,10 @@ html{font-size:14px;}.tab-content > .tab-pane,[class~=custom-radio] li input{dis
   box-shadow: 0 5px 15px rgba(0,0,0,.05);
   letter-spacing: normal;
 }
+/*.products-list.grid .product-wapper .products-thumb .product-button .product-btn.active {
+	background: #cb8161;
+	color: #fff !important;
+}*/
 .products-list.grid .product-wapper .products-thumb .product-button .product-btn:hover {
   background: #cb8161;
   border-color: #cb8161;

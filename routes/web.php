@@ -14,6 +14,7 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\RazorpayController;
 
 // Public Route
 Route::get('/', function () { return view('welcome'); })->name('welcome');
@@ -86,6 +87,12 @@ Route::middleware('auth')->group(function () {
     // Address
     Route::post('/address/store', [AddressController::class, 'store'])->name('address.store');
     Route::delete('/address/remove/{id}', [AddressController::class, 'remove'])->name('address.remove');
+
+    // RazorPay
+    Route::get('/razorpay', [RazorpayController::class, 'createOrder'])->name('razorpay');
+    Route::post('/razorpay/payment', [RazorpayController::class, 'handlePayment'])->name('razorpay.payment');
+    Route::get('/payment/success', [RazorpayController::class, 'success'])->name('payment.success');
+    Route::get('/payment/failed', [RazorpayController::class, 'failed'])->name('payment.failed');
 });
 
 // Profile Routes (Common for All Authenticated Users)

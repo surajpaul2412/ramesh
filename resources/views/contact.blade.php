@@ -49,7 +49,7 @@
 														<h2>Phone</h2>
 													</div>
 													<div class="item-content">
-														810.222.5439
+														<a href="tel:+918888800079">+91 8888800079</a>
 													</div>
 												</div>
 											</div>
@@ -59,9 +59,9 @@
 														<h2>Customer Service</h2>
 													</div>
 													<div class="item-content">
-														<p>Monday to Friday</p>
-														<p>8:00am – 4:00pm Sydney, NSW time (UTC +10)</p>
-														<p>Saturday and Sunday closed</p>
+														<p>Monday to Saturday</p>
+														<p>4837 / 44 Ground Floor , Regar Pura Karol Bagh New Delhi 110005</p>
+														<p>Sunday closed</p>
 													</div>
 												</div>
 											</div>
@@ -71,7 +71,7 @@
 														<h2>Returns</h2>
 													</div>
 													<div class="item-content small-width">
-														For information on Returns and Refunds, please click <a href="#">here.</a>
+														For information on Returns and Refunds, please click <a href="{{route('return-policy')}}">here.</a>
 													</div>
 												</div>
 											</div>

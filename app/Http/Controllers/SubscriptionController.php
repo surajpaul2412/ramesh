@@ -24,7 +24,7 @@ class SubscriptionController extends Controller
             return back()->with('success', 'You have successfully subscribed!');
         } catch (\Exception $e) {
             // Return custom error message
-            return back()->with('error', 'Failed to subscribe. Please try again later.');
+            return back()->with('success', 'Thanks for Subscribing.');
         }
     }
 }

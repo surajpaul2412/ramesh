@@ -17,7 +17,6 @@ class Product extends Model
         'sale_price', 
         'rating', 
         'primary_image', 
-        'hover_image', 
         'label', 
         'is_featured', 
         'stock', 
@@ -42,6 +41,11 @@ class Product extends Model
     public function wishlists()
     {
         return $this->hasMany(Wishlist::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
     }
 
     // Define relationship with cart

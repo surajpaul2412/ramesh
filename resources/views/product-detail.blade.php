@@ -34,29 +34,16 @@
 													<div class="image-thumbnail slick-carousel slick-vertical" data-asnavfor=".image-additional" data-centermode="true" data-focusonselect="true" data-columns4="5" data-columns3="4" data-columns2="4" data-columns1="4" data-columns="4" data-nav="true" data-vertical="&quot;true&quot;" data-verticalswiping="&quot;true&quot;">
 														<div class="img-item slick-slide">
 															<span class="img-thumbnail-scroll">
-																<img width="600" height="600" src="media/product/1.jpg" alt="">
+																<img width="600" height="600" src="{{ asset('storage/' . $product->primary_image) }}" alt="{{$product->slug}}">
 															</span>
 														</div>
+														@foreach($product->images as $image)
 														<div class="img-item slick-slide">
 															<span class="img-thumbnail-scroll">
-																<img width="600" height="600" src="media/product/1-2.jpg" alt="">
+																<img width="600" height="600" src="{{ asset('storage/' . $image->image_path) }}" alt="{{$product->slug}}">
 															</span>
 														</div>
-														<div class="img-item slick-slide">
-															<span class="img-thumbnail-scroll">
-																<img width="600" height="600" src="media/product/2.jpg" alt="">
-															</span>
-														</div>
-														<div class="img-item slick-slide">
-															<span class="img-thumbnail-scroll">
-																<img width="600" height="600" src="media/product/2-2.jpg" alt="">
-															</span>
-														</div>
-														<div class="img-item slick-slide">
-															<span class="img-thumbnail-scroll">
-																<img width="600" height="600" src="media/product/3.jpg" alt="">
-															</span>
-														</div>
+														@endforeach
 													</div>
 												</div>
 											</div>
@@ -64,20 +51,13 @@
 												<div class="scroll-image main-image">
 													<div class="image-additional slick-carousel" data-asnavfor=".image-thumbnail" data-fade="true" data-columns4="1" data-columns3="1" data-columns2="1" data-columns1="1" data-columns="1" data-nav="true">
 														<div class="img-item slick-slide">
-															<img width="900" height="900" src="media/product/1.jpg" alt="" title="">
+															<img width="900" height="900" src="{{ asset('storage/' . $product->primary_image) }}" alt="{{$product->slug}}" title="{{$product->name}}">
 														</div>
+														@foreach($product->images as $image)
 														<div class="img-item slick-slide">
-															<img width="900" height="900" src="media/product/1-2.jpg" alt="" title="">
+															<img width="900" height="900" src="{{ asset('storage/' . $image->image_path) }}" alt="{{$product->slug}}" title="{{$product->name}}">
 														</div>
-														<div class="img-item slick-slide">
-															<img width="900" height="900" src="media/product/2.jpg" alt="" title="">
-														</div>
-														<div class="img-item slick-slide">
-															<img width="900" height="900" src="media/product/2-2.jpg" alt="" title="">
-														</div>
-														<div class="img-item slick-slide">
-															<img width="900" height="900" src="media/product/3.jpg" alt="" title="">
-														</div>
+														@endforeach
 													</div>
 												</div>
 											</div>
@@ -113,11 +93,11 @@
 													<button type="button" class="minus">-</button>	
 												</div>
 												<div class="btn-add-to-cart">
-													<a href="#" tabindex="0">Add to cart</a>
+													<a href="1" >Add to cart 1</a>
 												</div>
 											</div>
 											<div class="btn-quick-buy" data-title="Wishlist">
-												<button class="product-btn">Buy It Now</button>
+												<a href="" class="product-btn">Buy It Now</a>
 											</div>
 											<div class="btn-wishlist" data-title="Wishlist">
 												<button class="product-btn">Add to wishlist</button>

@@ -18,7 +18,7 @@
                                                 <div class="item-product-cat-content">
                                                     <a href="shop-grid-left.html">
                                                         <div class="item-image animation-horizontal">
-                                                            <img width="258" height="258" src="{{$category->image}}" alt="{{$category->slug}}">
+                                                            <img width="258" height="258" src="{{ asset('storage/' . $category->image) }}" alt="{{$category->slug}}">
                                                         </div>
                                                     </a>            
                                                     <div class="product-cat-content-info">
@@ -99,7 +99,7 @@
                                             <div class="item-product-cat-content">
                                                 <div class="item-image animation-horizontal">
                                                     <a href="shop-grid-left.html">
-                                                        <img width="330" height="330" src="{{$category->image}}" alt="{{$category->slug}}">
+                                                        <img width="330" height="330" src="{{ asset('storage/' . $category->image) }}" alt="{{$category->slug}}">
                                                     </a>
                                                 </div>
                                                 <div class="product-cat-content-info">

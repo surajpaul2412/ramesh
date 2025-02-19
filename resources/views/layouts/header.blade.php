@@ -57,7 +57,7 @@
                                             <div class="total-percent"><div class="percent" style="width:20%"></div></div>
                                         </div>
                                         <div class="buttons">
-                                            <a href="shop-cart.html" class="button btn view-cart btn-primary">View cart</a>
+                                            <a href="{{route('cart.index')}}" class="button btn view-cart btn-primary">View cart</a>
                                             <a href="shop-checkout.html" class="button btn checkout btn-default">Check out</a>
                                         </div>
                                     </div>

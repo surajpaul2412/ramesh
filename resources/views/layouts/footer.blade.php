@@ -24,8 +24,8 @@
 
                             <div class="block block-social">
                                 <ul class="social-link">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/swarnsilva/"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/swarnsilva/"><i class="fa fa-facebook"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -35,22 +35,22 @@
                                 <div class="block-content">
                                     <ul>
                                         <li>
-                                            <a href="shop-grid-left.html">Contact Us</a>
+                                            <a href="{{route('contact')}}">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a href="shop-grid-left.html">Track Your Order</a>
+                                            <a href="{{route('customer.dashboard')}}">Track Your Order</a>
                                         </li>
                                         <li>
-                                            <a href="shop-grid-left.html">Product Care & Repair</a>
+                                            <a href="{{route('welcome')}}">Product Care & Repair</a>
                                         </li>
                                         <li>
-                                            <a href="shop-grid-left.html">Book an Appointment</a>
+                                            <a href="{{route('welcome')}}">Book an Appointment</a>
                                         </li>
                                         <li>
-                                            <a href="shop-grid-left.html">Frequently Asked Questions</a>
+                                            <a href="{{route('welcome')}}">Frequently Asked Questions</a>
                                         </li>
                                         <li>
-                                            <a href="shop-grid-left.html">Shipping & Returns</a>
+                                            <a href="{{route('welcome')}}">Shipping & Returns</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -62,19 +62,19 @@
                                 <div class="block-content">
                                     <ul>
                                         <li>
-                                            <a href="#">About Us</a>
+                                            <a href="{{route('about')}}">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="#">Our Producers</a>
+                                            <a href="{{route('shop')}}">Our Producers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Terms & Conditions</a>
+                                            <a href="{{route('term-conditions')}}">Terms & Conditions</a>
                                         </li>
                                         <li>
-                                            <a href="#">Privacy Policy</a>
+                                            <a href="{{route('privacy-policy')}}">Privacy Policy</a>
                                         </li>
                                         <li>
-                                            <a href="#">Return Policy</a>
+                                            <a href="{{route('return-policy')}}">Return Policy</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -87,7 +87,7 @@
                                     <ul>
                                         @foreach(categories() as $category)
                                         <li>
-                                            <a href="">{{$category->name}}</a>
+                                            <a href="{{route('category',$category->slug)}}">{{$category->name}}</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -112,7 +112,7 @@
                         <div class="col-md-6">
                             <div class="footer-right">
                                 <div class="block block-image">
-                                    <img width="309" height="32" src="media/payments.png" alt="payments">
+                                    <img width="309" height="32" src="{{asset('media/payments.png')}}" alt="payments">
                                 </div>
                             </div>
                         </div>
